@@ -1,7 +1,7 @@
 kothic-js-mapcss
 ================
 
-(Documentation provided by @nickw1, based on personal experience)
+(Documentation provided by [nickw1](https://github.com/nickw1), based on personal experience)
 
 This is a script and makefile to convert a MapCSS stylesheet into a JavaScript
 file suitable for use with kothic.js.

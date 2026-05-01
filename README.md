@@ -8,6 +8,28 @@ MapCSS into checked-in JavaScript style modules. The broader Kothic ecosystem ha
 several related implementations and forks, so treat this as reusable legacy
 tooling rather than the only supported path.
 
+The maintained converter now lives in
+[`kothic/kothic`](https://github.com/kothic/kothic). It uses the current Python
+MapCSS parser and emits the same `MapCSS.loadStyle(...)` style-module shape for
+Kothic JS-compatible renderers. Prefer that path for new work:
+
+```sh
+python3 -m src.kothic_js \
+  --mapcss path/to/style.mapcss \
+  --output path/to/style.js \
+  --name style-name
+```
+
+or through the main Kothic CLI:
+
+```sh
+python3 -m src.komap \
+  --renderer js \
+  --stylesheet path/to/style.mapcss \
+  --style-name style-name \
+  --output-file path/to/style.js
+```
+
 [`kothic-node`](https://github.com/kothic/kothic-node) is another option in the
 same family: it includes a MapCSS parser and can avoid this separate conversion
 step for Node.js based workflows.
